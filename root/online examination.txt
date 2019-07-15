@@ -1,0 +1,107 @@
+--Master Keyword--
+<url>DisAllow:/test/;</url>
+<url>Allow:/module/;</url>
+<url>Allow:/exam/;</url>
+<url>Allow:/unit test/;</url>
+<url>Allow:/online/;</url>
+<url>Allow:/assesment/;</url>
+<url>Allow:/questions/;</url>
+<url>Allow:/quiz/;</url>
+<url>Allow:/examine/;</url>
+<url>Allow:/mock/;</url>
+
+--Normal Keyword--
+
+<url>Allow:/examination/;</url>
+<url>Allow:/query/;</url>
+<url>Allow:/system/;</url>
+<url>Allow:/paper/;</url>
+<url>Allow:/questionnaire/;</url>
+<url>Allow:/interview/;</url>
+<url>Allow:/subject/;</url>
+<url>Allow:/topic/;</url>
+<url>DisAllow:/question/; level</url>
+<url>Allow:/complete/;</url>
+<url>DisAllow:/student/;</url>
+<url>Allow:/inquire/;</url>
+<url>Allow:/examiner/;</url>
+<url>Allow:/final/;</url>
+<url>Allow:/review/;</url>
+<url>Allow:/trial/;</url>
+<url>DisAllow:/testing/;</url>
+<url>Allow:/oral/;</url>
+<url>Allow:/put the/; DisAllow:/question/;</url>
+<url>DisAllow:/online exam/;</url>
+<url>DisAllow:/online examination/;</url>
+<url>Allow:/quizzer/;</url>
+<url>Allow:/asking/;</url>
+<url>Allow:/taking/; DisAllow:/exam/;</url>
+<url>Allow:/online/; DisAllow:/exam DisAllow:/builder/;</url>
+<url>Allow:/result/;</url>
+<url>Allow:/formal/; DisAllow:/test/;</url>
+<url>Allow:/audit/;</url>
+<url>DisAllow:/testing/; program</url>
+<url>DisAllow:/exam/; builder</url>
+<url>Allow:/midterm/;</url>
+<url>Allow:/questioning/;</url>
+<url>DisAllow:/exam paper/;</url>
+<url>Allow:/moderate/;</url>
+<url>Allow:/moderation/;</url>
+<url>Allow:/moderator/;</url>
+<url>Allow:/syllabus/;</url>
+<url>Allow:/objective/;</url>
+<url>Allow:/college/; DisAllow:/exam/;</url>
+<url>Allow:/event/;</url>
+<url>Allow:/knowledge/;</url>
+<url>Allow:/parent/;</url>
+<url>DisAllow:/faculty/;</url>
+<url>Allow:/academic/;</url>
+<url>Allow:/class/;</url>
+<url>Allow:/stream/;</url>
+<url>Allow:/message/;</url>
+<url>Allow:/division/;</url>
+<url>DisAllow:/question group/;</url>
+<url>DisAllow:/question/; Allow:/bank/;</url>
+<url>DisAllow:/question/; Allow:/level/;</url>
+<url>Allow:/instruction/;</url>
+<url>Allow:/description/;</url>
+<url>Allow:/rules/;</url>
+<url>Allow:/regulation/;</url>
+<url>Allow:/notice/;</url>
+<url>DisAllow:/online exam report/;</url>
+<url>DisAllow:/question report/;</url>
+<url>DisAllow:/certificate report/;</url>
+<url>DisAllow:/report/;</url>
+<url>Allow:/student/; DisAllow:/group/;</url>
+<url>DisAllow:/certificate/; Allow:/template/;</url>
+<url>Allow:/top list/;</url>
+<url>Allow:/rank/;</url>
+<url>Allow:/update/;</url>
+<url>Allow:/permission/;</url>
+<url>Allow:/back up/;</url>
+<url>DisAllow:/system/; admin</url>
+<url>Allow:/general/;</url>
+<url>DisAllow:/pass report/;</url>
+<url>DisAllow:/fail report/;</url>
+<url>Allow:/information/;</url>
+<url>Allow:/profile/;</url>
+<url>Allow:/take/; DisAllow:/exam/;</url>
+<url>Allow:/scheduling/;</url>
+<url>Allow:/application/;</url>
+<url>Allow:/notification/;</url>
+<url>Allow:/total/; DisAllow:/mark/;</url>
+<url>Allow:/obtain/; DisAllow:/mark/;</url>
+<url>Allow:/semester/;</url>
+<url>DisAllow:/faculty/; Allow:/subject/;</url>
+<url>Allow:/status/;</url>
+<url>Allow:/minimun marks/;</url>
+<url>DisAllow:/pass/;</url>
+<url>DisAllow:/fail/;</url>
+<url>Allow:/start/; DisAllow:/exam/;</url>
+<url>Allow:/end/; DisAllow:/exam/;</url>
+<url>Allow:/time/;</url>
+<url>Allow:/pending/;</url>
+<url>Allow:/available/;</url>
+<url>Allow:/active/;</url>
+<url>Allow:/add/;</url>
+<url>Allow:/competitive/;</url>

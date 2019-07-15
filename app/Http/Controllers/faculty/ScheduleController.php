@@ -1,0 +1,167 @@
+<?php
+
+namespace App\Http\Controllers\faculty;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Faculty\Subject;
+use App\Faculty\Schedule;
+
+class ScheduleController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $schedules = Schedule::all();
+        // $divisons[0]->semester;
+        // echo "<pre>";
+        // print_r($divisons->toarray());
+        // die;
+        return view('faculty.schedule.index',compact('schedules'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $subjects = Subject::all();
+        return view('faculty.schedule.create',compact('subjects'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+            "subject_id" => "required",
+            "date" => "required",
+            "start_time" => "required",
+            "end_time" => "required",
+            "top_scorer" => "required",
+            "no_of_top_scorers" => "required|numeric",
+        ],[
+            "subject_id.required" => "Please Select Subject",
+            "date.required" => "Please Select Date",
+            "start_time.required" => "Please Enter Start Time",
+            "end_time.required" => "Please Enter End Time",
+            "top_scorer.required" => "Please Enter Top Scorer",
+            "no_of_top_scorers.required" => "Please Enter No Of Top Scorers",
+            "no_of_top_scorers.numeric" => "No Of Top Scorers Must Be Numeric"
+        ]);
+
+        // echo "<pre>";
+        // print_r($request->toarray());
+        // die;
+
+        $schedule = new Schedule();
+        $schedule->subject_id = $request->subject_id;
+        $schedule->date = $request->date;
+        $schedule->start_time = $request->start_time;
+        $schedule->end_time = $request->end_time;
+        $schedule->top_scorer = $request->top_scorer;
+        $schedule->no_of_top_scorers = $request->no_of_top_scorers;
+
+        $schedule->save();
+
+        return redirect('faculty/schedule');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $schedule = Schedule::find($id);
+        $subject = Subject::all();
+        // echo "<pre>";
+        // print_r($mcq_question->toarray());
+        // die;
+        return view('faculty.schedule.edit',compact('schedule','subject'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            "subject_id" => "required",
+            "date" => "required",
+            "start_time" => "required",
+            "end_time" => "required",
+            "top_scorer" => "required",
+            "no_of_top_scorers" => "required|numeric",
+        ],[
+            "subject_id.required" => "Please Select Subject",
+            "date.required" => "Please Select Date",
+            "start_time.required" => "Please Enter Start Time",
+            "end_time.required" => "Please Enter End Time",
+            "top_scorer.required" => "Please Enter Top Scorer",
+            "no_of_top_scorers.required" => "Please Enter No Of Top Scorers",
+            "no_of_top_scorers.numeric" => "No Of Top Scorers Must Be Numeric"
+        ]);
+
+        $schedule = Schedule::find($id);
+        $schedule->subject_id = $request->subject_id;
+        $schedule->date = $request->date;
+        $schedule->start_time = $request->start_time;
+        $schedule->end_time = $request->end_time;
+        $schedule->top_scorer = $request->top_scorer;
+        $schedule->no_of_top_scorers = $request->no_of_top_scorers;
+
+        $schedule->save();
+
+        return redirect('faculty/schedule');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        Schedule::destroy($id);
+        return redirect('faculty/schedule');
+    }
+    public function action(Request $request)
+    {
+        
+        $ids = explode(',',$request->ids);
+        switch ($request->action) {
+            case 'Delete':
+                Schedule::destroy($ids);
+                break;
+        }
+    }
+}
